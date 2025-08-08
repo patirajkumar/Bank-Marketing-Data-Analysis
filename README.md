@@ -1,4 +1,4 @@
-🏦 Bank Term Deposit Prediction App
+##🏦 Bank Term Deposit Prediction App##
 This project is a machine learning web application built with Streamlit that predicts whether a bank customer will subscribe to a term deposit based on their demographic profile and previous campaign interactions. The model is trained on the Bank Marketing dataset and optimized for real-time prediction and usability.
 
 🚀 Features
