@@ -1,81 +1,68 @@
-##🏦 Bank Term Deposit Prediction App##
-This project is a machine learning web application built with Streamlit that predicts whether a bank customer will subscribe to a term deposit based on their demographic profile and previous campaign interactions. The model is trained on the Bank Marketing dataset and optimized for real-time prediction and usability.
+## 🏦 Bank Term Deposit Prediction App
+This project is a machine learning web application built with Streamlit that predicts whether a bank client will subscribe to a term deposit. It uses demographic, financial, and campaign-related features to deliver predictions with high confidence.
 
-🚀 Features
- User-friendly web interface built with Streamlit
+-------------------------------
 
- Predicts whether a customer will subscribe (Yes) or not subscribe (No) to a term deposit
+## ✅ Features
+ Interactive web interface built with Streamlit
 
- Displays prediction confidence (probability score)
+ Predicts subscription outcome: Yes or No
+
+ Displays probability confidence alongside prediction
 
  Built using a trained XGBoost classifier
 
- Handles categorical variables through manual label encoding
+ Handles categorical inputs via manual encoding
 
  Real-time prediction based on user input
 
- Includes data scaling and preprocessing for robust predictions
+ Trained on over 41,000 records of bank marketing data
 
-🔍 Dataset Information
-Dataset: bankmarketing.csv (UCI Bank Marketing Dataset)
+---------------------------------
 
-Rows: 41,188
+## 🧠 Model Information
+Algorithm Used: XGBoost Classifier
 
-Target variable: y (term deposit subscription: yes / no)
+Model Selection: Chosen after comparing with Logistic Regression and Gradient Boosting
 
-Features include:
+Final Model Performance:
 
-Age, Job, Marital status, Education
+Accuracy: ~93.8%
 
-Housing and personal loans
+ROC AUC Score: ~0.956
 
-Contact type, Campaign metadata
+Cross-Validation Score (5-fold): [0.938, 0.933, 0.936, 0.932, 0.937]
 
-Economic indicators (e.g., employment rate, euribor)
+------------------------------------
 
-🤖 Model Information
-Model	Accuracy	ROC AUC Score
-XGBoost	~87.3%	~0.94
-Logistic Regression	~77.5%	~0.89
-Gradient Boosting	~86.2%	~0.92
+## 📊 Dataset Overview
+Name: Bank Marketing Dataset (bankmarketing.csv)
 
-Final Model: XGBoost Classifier
+Records: 41,188
 
-Preprocessing:
+Target variable: y (Subscribed: yes / no)
 
-Removed outliers and less-informative columns (pdays, poutcome, etc.)
+Sample Features:
 
-Handled "unknown" categories with mode imputation
+age, job, marital, education, default, housing, loan
 
-Scaled numerical data using MinMaxScaler
+contact, month, day_of_week, campaign, previous, poutcome
 
-Evaluation:
+Economic indicators: emp.var.rate, cons.price.idx, cons.conf.idx, euribor3m, nr.employed
 
-Accuracy
+-----------------------------------------
 
-Classification report
+## 🛠 Built With
+Python – Core programming language
 
-Confusion matrix
+Streamlit – Web app framework
 
-AUC Score
+XGBoost – Machine learning model
 
-Precision-Recall Curve
+scikit-learn – Preprocessing, metrics, and training utilities
 
-Feature Importance using SHAP and XGBoost importance scores
+pandas – Data manipulation and exploration
 
-🛠 Built With
-Python 
+joblib – Model serialization
 
-Streamlit  – for building the interactive UI
-
-XGBoost – powerful gradient boosting model
-
-scikit-learn – for preprocessing, training, and evaluation
-
-SHAP – for interpretability and feature analysis
-
-Pandas – for data manipulation
-
-Matplotlib/Seaborn – for data visualization
-
-Joblib – for model serialization
+------------------------------------------
